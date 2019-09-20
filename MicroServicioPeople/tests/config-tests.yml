@@ -1,0 +1,13 @@
+pyms:
+  requests: true
+  swagger:
+    path: "swagger"
+    file: "swagger.yml"
+ms:
+  DEBUG: false
+  TESTING: false
+  APP_NAME: MicroservicePeople
+  APPLICATION_ROOT : "/people"
+  SQLALCHEMY_TRACK_MODIFICATIONS: true
+  DATABASE: db.postgresql
+  SQLALCHEMY_DATABASE_URI: postgresql://postgres:killer45@localhost/Prueba2

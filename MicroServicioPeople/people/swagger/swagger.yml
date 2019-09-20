@@ -1,0 +1,122 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  title: "My API documentation"
+  version: "1.0"
+consumes:
+  - application/json
+produces:
+  - application/json
+basePath: /v1
+tags:
+- name: Characters
+  description: "Everything about your Characters"
+paths:
+  /people:
+      get:
+        tags: 
+        - Characters
+        operationId: people.views.views.read_characters
+        summary: Get all Characters
+        responses:
+          200:
+            description: 'get characters'
+            schema:
+                type: array
+                items:
+                    $ref: '#/definitions/Personaje'
+      post:
+        tags: 
+        - Characters
+        operationId: people.views.views.create_character
+        summary: Create a character
+        description: Create a new character
+        parameters:
+        - in: body
+          name: character 
+          description: Character to create
+          required: true
+          schema:
+            $ref: '#/definitions/Personaje'
+        responses:
+            201:
+               description: Successfully created character
+               schema:
+                    $ref: '#/definitions/Personaje'
+            400:
+               description: "Invalid input"
+            409:
+               description: "Character exist"
+  /people/{character_id}:
+    get:
+      operationId: people.views.views.read_one
+      tags: 
+      - Characters
+      summary: Read one character
+      description: Read one character
+      parameters:
+      - name: character_id
+        in: path
+        description: Id of the character to get
+        type: integer
+        required: True
+      responses:
+        200:
+          description: Successfully read character from character data operation
+          schema:
+            $ref: '#/definitions/Personaje'
+    put:
+      operationId: people.views.views.update
+      tags: 
+      - Characters
+      summary: Update a character
+      description: Update a character
+      parameters:
+      - name: character_id
+        in: path
+        description: Id the character to update
+        type: integer
+        required: True
+      - name: character
+        in: body
+        schema:
+            $ref: '#/definitions/Personaje'
+      responses:
+        200:
+          description: Successfully updated character
+          schema:
+            $ref: '#/definitions/Personaje'
+        400:
+          description: "Invalid input"             
+    delete:
+      operationId: people.views.views.delete
+      tags:
+       - Characters
+      summary: Delete a character from the character list
+      description: Delete a character
+      parameters:
+      - name: character_id
+        in: path
+        type: integer
+        description: Id of the character to delete
+        required: true
+      responses:
+        200:
+          description: Successfully deleted a character
+
+definitions:
+  Personaje:
+    type: object
+    required:
+    - name
+    properties:  
+      name:
+        type: string
+      isAlive:
+        type: boolean
+      placeId:
+        type: number
+    example:
+        name: Nombrecico
+        isAlive: true
+        placeId: 1

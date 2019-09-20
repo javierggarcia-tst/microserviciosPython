@@ -1,0 +1,81 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  title: "My API documentation Juego Tornos"
+  version: "1.0"
+consumes:
+  - application/json
+produces:
+  - application/json
+basePath: /v1
+tags:
+- name: JuegoTornos
+  description: "Everything about your Places"
+paths:
+  /juegoTornos:
+    get:
+      operationId: juegoTornos.views.views.read_all
+      tags: 
+      - JuegoTornos
+      summary: Read all characters in places
+      description: Read all characters in places
+      responses:
+       200:
+        description: Successfully Read all characters in places
+        schema:
+          $ref: '#/definitions/JuegoTornos'
+   
+  /juegoTornos/{juego_id}:
+    get:
+      operationId: juegoTornos.views.views.read_one
+      tags: 
+      - JuegoTornos
+      summary: Read one character
+      description: Read one character
+      parameters:
+      - name: juego_id
+        in: path
+        description: Id of the character to get
+        type: integer
+        required: True
+      responses:
+        200:
+          description: Successfully read character from character data operation
+          schema:
+            $ref: '#/definitions/Juego'
+   
+definitions:
+  JuegoTornos:
+    type: array
+    items:
+       $ref: '#/definitions/Juego' 
+  Juego:
+    type: object
+    properties:
+      id:
+        type: integer
+        example: 1
+      name:
+        type: string
+        example: "Nombrecico del Lugarico"
+      people:
+        type: array
+        items:
+            type: object
+            $ref: '#/definitions/Personaje'    
+  Personaje:
+    type: object
+    required:
+    - name
+    properties: 
+      id:
+        type: number
+      name:
+        type: string
+      isAlive:
+        type: boolean
+    example:
+        id: 1
+        name: Nombrecico
+        isAlive: true
+        
