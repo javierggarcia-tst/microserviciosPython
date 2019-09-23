@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MicroServicioPeople", "MicroServicioPeople\MicroServicioPeople.pyproj", "{62429695-CE84-4B90-AD8F-F0C18F4DAA48}"
 EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MicroServicioPlace", "MicroServicioPlace\MicroServicioPlace.pyproj", "{3517D41A-E6D7-48B0-9124-4F7C79A9EEA2}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "MicroServicioJuegoTornos", "MicroServicioJuegoTornos\MicroServicioJuegoTornos.pyproj", "{3F62D50B-3038-4C75-8637-8195423FC339}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,14 +15,6 @@ Global
 		{62429695-CE84-4B90-AD8F-F0C18F4DAA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62429695-CE84-4B90-AD8F-F0C18F4DAA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62429695-CE84-4B90-AD8F-F0C18F4DAA48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3517D41A-E6D7-48B0-9124-4F7C79A9EEA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3517D41A-E6D7-48B0-9124-4F7C79A9EEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3517D41A-E6D7-48B0-9124-4F7C79A9EEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3517D41A-E6D7-48B0-9124-4F7C79A9EEA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3F62D50B-3038-4C75-8637-8195423FC339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3F62D50B-3038-4C75-8637-8195423FC339}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3F62D50B-3038-4C75-8637-8195423FC339}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3F62D50B-3038-4C75-8637-8195423FC339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

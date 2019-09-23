@@ -47,7 +47,6 @@
     <Compile Include="tests\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="comeAPI2 - Web Deploy.pubxml" />
     <Content Include="config.yml" />
     <Content Include="people\swagger\swagger.yml" />
     <Content Include="requirements.txt" />
